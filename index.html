@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    </link>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tools">
+            <div class="toolDiv">
+                <label class="toolHead" for="bgTextColor">Choose backgound color</label>
+                <input class="toolInput" type="color" id="bgTextColor">
+            </div>
+            <div class="toolDiv">
+                <label class="toolHead" for="textColor">Choose Text color</label>
+                <input class="toolInput" type="color" id="textColor">
+            </div>
+            <div style="
+            margin: 2.2rem 0 2.2rem 2.2rem;">
+                <label class="toolHead" for="movingTxtColor">Choose Moving Text color</label>
+                <input class="toolInput" type="color" id="movingTxtColor">
+            </div>
+            <div style="margin: 2.2rem 0 2.2rem 2.2rem;"> 
+                <label class="toolHead">Enter Text</label>
+                <input style="font-size: 14px;
+                padding: 0rem;height: 1.25rem;" type="text" id="mainText">
+            </div>
+            <div style="margin: 2.2rem 0 2.2rem 2.2rem;">
+                <label class="toolHead">Enter Moving Text</label>
+                <input placeholder="Please add text" style="width: 12rem;
+                font-size: 14px;
+                margin-right: 0.5rem; height: 1.25rem;" type="text" id="movingText"><span><button style="font-size: 14px;height: 1.56rem; cursor: pointer;" id="movingTextBtn">Add</button></span>
+            </div>
+            <div style="margin: 2rem 2rem 2rem 2rem;">
+                <ul id="list">
+                
+                </ul>
+            </div>
+        </div>
+        <div class="textcontainer" id="textcontainer">
+            <p class="textHeader" id="textHeader">CODE WITH VISHWA</p>
+            <p><span class="typed-text" id="typing"></span><span class="cursor" id="cursorr">&nbsp;</span></p>
+        </div>
+    </div>
+    <script src="Index.js"></script>
+
+</body>
+
+</html>
