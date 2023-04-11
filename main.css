@@ -160,3 +160,11 @@ ul {
     flex-wrap: wrap;
     align-content: flex-start;
   }
+ @media screen and (max-device-width: 640px) {
+    .mobileView {
+      margin: 0rem 2rem 0rem 0rem;
+    }
+    .toolDiv{
+      margin: 2.2rem 0rem 2.2rem 2.2rem;
+    }
+  }
