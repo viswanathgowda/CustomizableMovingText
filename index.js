@@ -34,6 +34,11 @@ movingTextBtn.addEventListener("click", function () {
     if (dupTextArray.length == 0) {
         textArray = []
     }
+    if (textArray.length < 8) {
+        textArray.push(movingText.value)
+    } else {
+        alert("you can add max 8 moving Texts")
+    }
     textArray.push(movingText.value)
     textArray = textArray.filter((item, index) => textArray.indexOf(item) === index)
     localStorage.setItem('textArray', textArray)
