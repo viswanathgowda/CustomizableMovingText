@@ -4,14 +4,12 @@ body {
   margin: 0;
 
 }
-
-/* .textHeader{
-    color: rgb(248, 246, 246);
-    font-size: 3rem;
-}
-.typing{
-    animation: none;
-} */
+.textHeader {
+   color: #500707
+ }
+ .typing {
+   color: #F92601;
+ }
 .tools {
   width: 20%;
   background-color: white;
@@ -44,7 +42,7 @@ body {
 .textcontainer {
   width: 80%;
   width: 80%;
-  background-color: #4b4b4b;
+  background-color: #FFDD00;
   height: 100vh;
   display: flex;
   align-items: center;
