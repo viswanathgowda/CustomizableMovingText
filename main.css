@@ -4,11 +4,12 @@ body {
   margin: 0;
 
 }
-.textHeader {
+
+ .textHeader {
    color: #500707
  }
+
  .typed-text {
- {
    color: #F92601;
  }
 .tools {
@@ -213,4 +214,32 @@ ul li.checked::before {
   font-size: 14px;
   margin-right: 0.5rem;
   height: 1.25rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  font-size: 20px;
+  width: 370px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 18px 0;
+  position: absolute;
+  z-index: 1;
+  top: -17px;
+  left: 104%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
 }

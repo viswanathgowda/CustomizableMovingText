@@ -39,8 +39,8 @@ movingTextBtn.addEventListener("click", function () {
     } else {
         alert("you can add max 8 moving Texts")
     }
-    textArray.push(movingText.value)
     textArray = textArray.filter((item, index) => textArray.indexOf(item) === index)
+   
     localStorage.setItem('textArray', textArray)
     listing();
     location.reload()
@@ -67,11 +67,96 @@ window.addEventListener("load", function (event) {
         textArray = data.split(",")
     }
     listing();
+    fisrtTimeVisit()
     if (textArray.length) {
         type();
     }
+    
 })
-
+function fisrtTimeVisit(){
+    if(localStorage.getItem('fisrtTimeVisit') == null){
+        let styles = {
+            "margin-left": "10px",
+            "cursor": "pointer",
+            "border-radius": "inherit",
+            "padding": "0.5rem",
+            "font-size": "13px"
+        }
+        let span = document.createElement("SPAN");
+        span.classList.add("tooltiptext")
+        span.innerText = "you can customize background color"
+        let btn = document.createElement("button");
+        Object.assign(btn.style, styles)
+        btn.innerHTML = "OK";
+        span.append(btn)
+        let t1 = document.getElementById("t1")
+        t1.append(span)
+        window.addEventListener("click", function(){
+            t1.removeChild(span)
+            tooltip2();
+        })
+        function tooltip2(){
+            let span = document.createElement("SPAN");
+        span.classList.add("tooltiptext")
+        span.innerText = "you can customize text color"
+        let btn = document.createElement("button");
+        Object.assign(btn.style, styles)
+        btn.innerHTML = "OK";
+        span.append(btn)
+        let t2 = document.getElementById("t2")
+        t2.append(span)
+        window.addEventListener("click", function(){
+            t2.removeChild(span)
+            tooltip3();
+        })
+        }
+        function tooltip3(){
+            let span = document.createElement("SPAN");
+        span.classList.add("tooltiptext")
+        span.innerText = "you can customize moving text color"
+        let btn = document.createElement("button");
+        Object.assign(btn.style, styles)
+        btn.innerHTML = "OK";
+        span.append(btn)
+        let t3 = document.getElementById("t3")
+        t3.append(span)
+        window.addEventListener("click", function(){
+            t3.removeChild(span)
+            tooltip4();
+        })
+        }
+        function tooltip4(){
+            let span = document.createElement("SPAN");
+        span.classList.add("tooltiptext")
+        span.innerText = "you can customize text"
+        let btn = document.createElement("button");
+        Object.assign(btn.style, styles)
+        btn.innerHTML = "OK";
+        span.append(btn)
+        let t4 = document.getElementById("t4")
+        t4.append(span)
+        window.addEventListener("click", function(){
+            t4.removeChild(span)
+            tooltip5();
+        })
+        }
+        function tooltip5(){
+            let span = document.createElement("SPAN");
+        span.classList.add("tooltiptext")
+        span.innerText = "you can customize moving text"
+        let btn = document.createElement("button");
+        Object.assign(btn.style, styles)
+        btn.innerHTML = "OK";
+        span.append(btn)
+        let t5 = document.getElementById("t5")
+        t5.append(span)
+        window.addEventListener("click", function(){
+            t5.removeChild(span)
+        })
+        }
+        localStorage.setItem("fisrtTimeVisit", true)
+    }
+}
 
 function listing() {
     dupTextArray = textArray
@@ -119,7 +204,6 @@ function type() {
     }
 }
 function erase() {
-    let keyValue = textArray[textArrayIndex]
     if (charIndex > 0) {
         if (!cursorSpan?.classList?.contains("typing"))
             cursorSpan?.classList.add("typing")
@@ -128,7 +212,6 @@ function erase() {
         charIndex ? setTimeout(erase, erasingDelay) : setTimeout(erase, 0)
     } else {
         cursorSpan?.classList.remove("typing")
-        //let index = textArray.indexOf(keyValue)
         if (textArrayIndex !== textArray.length - 1) {
             textArrayIndex++
         } else {

@@ -9,26 +9,30 @@
 <body>
     <div class="container">
         <div class="tools mobileView">
-            <div class="toolDiv">
+            <div class="toolDiv tooltip" id="t1">
                 <label class="toolHead" for="bgTextColor">Choose backgound color</label>
                 <input class="toolInput" type="color" id="bgTextColor">
             </div>
-            <div class="toolDiv">
+            <div class="toolDiv tooltip" id="t2">
                 <label class="toolHead" for="textColor">Choose Text color</label>
-                <input class="toolInput" type="color" id="textColor">
+                <input class="toolInput " type="color" id="textColor">
             </div>
             <div style="
-            margin: 2.2rem 0 2.2rem 2.2rem;">
+            margin: 2.2rem 0 2.2rem 2.2rem;" id="t3" class="tooltip">
                 <label class="toolHead" for="movingTxtColor">Choose Moving Text color</label>
-                <input class="toolInput" type="color" id="movingTxtColor">
+                <input class="toolInput " type="color" id="movingTxtColor">
             </div>
-            <div style="margin: 2.2rem 0 2.2rem 2.2rem;"> 
+            <div style="margin: 2.2rem 0 2.2rem 2.2rem;" class="tooltip" > 
                 <label class="toolHead ">Enter Text</label>
-                <input class="txtInput1" type="text" id="mainText">
+                <div id="t4">
+                    <input class="txtInput1" type="text" id="mainText" >
+                </div>
             </div>
-            <div style="margin: 2.2rem 0 2.2rem 2.2rem;">
+            <div style="margin: 2.2rem 0 2.2rem 2.2rem;" class="tooltip" >
                 <label class="toolHead ">Enter Moving Text</label>
-                <input class="txtInput2" placeholder="Please add text" type="text" id="movingText"><span><button style="font-size: 14px;height: 1.56rem; cursor: pointer;" id="movingTextBtn">Add</button></span>
+                <div id="t5">
+                    <input class="txtInput2" placeholder="Please add text" type="text" id="movingText" ><span><button style="font-size: 14px;height: 1.56rem; cursor: pointer;" id="movingTextBtn">Add</button></span>
+                </div>
             </div>
             <div style="margin: 2rem 2rem 2rem 2rem;">
                 <ul id="list">
@@ -38,7 +42,7 @@
         </div>
         <div class="textcontainer" id="textcontainer">
             <p class="textHeader" id="textHeader">CODE WITH VISHWA</p>
-            <p><span class="typed-text" id="typing"></span><span class="cursor" id="cursorr">&nbsp;</span></p>
+            <p><span class="typed-text" class="typing" id="typing"></span><span class="cursor" id="cursorr">&nbsp;</span></p>
         </div>
     </div>
     <script src="index.js"></script>
