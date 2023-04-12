@@ -152,9 +152,9 @@ function fisrtTimeVisit(){
         t5.append(span)
         window.addEventListener("click", function(){
             t5.removeChild(span)
+            localStorage.setItem("fisrtTimeVisit", true)
         })
         }
-        localStorage.setItem("fisrtTimeVisit", true)
     }
 }
 
